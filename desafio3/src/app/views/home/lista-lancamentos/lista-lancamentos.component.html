@@ -5,8 +5,8 @@
                 <th>ID</th>
                 <th>Origem</th>
                 <th>Valor R$</th>
-            <th>Categoria</th>
-            <th>Mês de Lançamento</th>
+                <th>Categoria</th>
+                <th>Mês de Lançamento</th>
             </tr>
             <tr *ngFor="let lancamento of lancamentos">
                 <td>{{lancamento.id}}</td>
@@ -17,5 +17,42 @@
             </tr> 
         </table>
     </mat-tab>
-    <mat-tab label="Lançamentos por Mês">Content 2</mat-tab>
+    <mat-tab label="Lançamentos por Mês">
+         <table>
+            <tr>
+                <th>ID</th>
+                <th>Origem</th>
+                <th>Valor R$</th>
+                <th>Categoria</th>
+                <th>Mês de Lançamento</th>
+            </tr>
+            <tr *ngFor="let lancamento of lancamentosMes">
+                <td>{{lancamento.id}}</td>
+                <td>{{lancamento.origem}}</td>
+                <td>{{lancamento.valor}}</td>
+                <td>{{lancamento.categoria}}</td>
+                <td>{{meses[lancamento.mes_lancamento-1]}}</td>
+            </tr> 
+        </table>    
+    </mat-tab>
+    <mat-tab label="Lançamentos por Categorias">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Origem</th>
+                <th>Valor R$</th>
+                <th>Categoria</th>
+                <th>Mês de Lançamento</th>
+            </tr>
+            <tr *ngFor="let lancamento of lancamentosCategoria">
+                <td>{{lancamento.id}}</td>
+                <td>{{lancamento.origem}}</td>
+                <td>{{lancamento.valor}}</td>
+                <td>{{lancamento.categoria}}</td>
+                <td>{{meses[lancamento.mes_lancamento-1]}}</td>
+            </tr> 
+        </table>    
+
+    </mat-tab>
+
 </mat-tab-group>  
