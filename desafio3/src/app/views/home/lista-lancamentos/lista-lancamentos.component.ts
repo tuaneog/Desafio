@@ -27,7 +27,7 @@ export class ListaLancamentosComponent implements OnInit {
   getLancamento(){
     
     
-   this.lancamentoService.getLancamentos().subscribe((lancamentos: Lancamento[]) =>{
+   this.lancamentoService.getLancamentos().subscribe((lancamentos: Lancamento[]) => {
       this.lancamentos = lancamentos;
       console.log(lancamentos);
 
