@@ -1,9 +1,13 @@
-<table>
-    <tr *ngFor="let lancamento of lancamentos">
-        <td>{{lancamento.id}}</td>
-        <td>{{lancamento.valor}}</td>
-        <td>{{lancamento.origem}}</td>
-        <td>{{lancamento.categoria}}</td>
-        <td>{{lancamento.mes_lancamento}}</td>
-    </tr> 
-</table>  
+<mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Lista de Lançamentos">
+        <table>
+            <tr *ngFor="let lancamento of lancamentos">
+                <td>{{lancamento.id}}</td>
+                <td>{{lancamento.valor}}</td>
+                <td>{{lancamento.origem}}</td>
+                <td>{{lancamento.categoria}}</td>
+                <td>{{lancamento.mes_lancamento}}</td>
+            </tr> 
+        </table>
+    </mat-tab>
+</mat-tab-group>  
