@@ -10,20 +10,9 @@ import { LancamentoService } from 'src/app/shared/service/lancamento.service';
 })
 export class ListaLancamentosComponent implements OnInit {
 
-  lancamentos: Lancamento[] = []/*[{
-    id: 1,
-    valor: 222,
-    origem: "uber",
-    categoria: 1,
-    mes_lancamento: 12
-},
-{
-    id: 2,
-    valor: 232,
-    origem: "taxi",
-    categoria: 5,
-    mes_lancamento: 2
-}];*/
+  lancamentos: Lancamento[] = []
+  meses = ["Janeiro", "Fevereiro", "Março", "Abril",
+"Junho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
   
   
 
@@ -38,7 +27,7 @@ export class ListaLancamentosComponent implements OnInit {
   getLancamento(){
     
     
-   this.lancamentoService.getLancamentos().subscribe((lancamentos: Lancamento[]) => {
+   this.lancamentoService.getLancamentos().subscribe((lancamentos: Lancamento[]) =>{
       this.lancamentos = lancamentos;
       console.log(lancamentos);
 
