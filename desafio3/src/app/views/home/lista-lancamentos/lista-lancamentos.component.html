@@ -1,6 +1,13 @@
 <mat-tab-group mat-align-tabs="start">
     <mat-tab label="Lista de Lançamentos">
         <table>
+            <tr>
+                <th>ID</th>
+                <th>Valor R$</th>
+                <th>Origem</th>
+            <th>Categoria</th>
+            <th>Mês de Lançamento</th>
+            </tr>
             <tr *ngFor="let lancamento of lancamentos">
                 <td>{{lancamento.id}}</td>
                 <td>{{lancamento.valor}}</td>
